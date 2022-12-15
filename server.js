@@ -18,8 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 let sqlProductos = new ClienteSQL(optionsMariaDB, "productos");
 let sqlMensajes = new ClienteSQL(optionsSQLite, "mensajes");
 
-/* sqlProductos.crearTablaProductos(); */
-/* sqlMensajes.crearTablaMensajes(); */
+sqlProductos.crearTablaProductos();
+sqlMensajes.crearTablaMensajes();
 
 //Ejs
 app.set('view engine', 'ejs');
